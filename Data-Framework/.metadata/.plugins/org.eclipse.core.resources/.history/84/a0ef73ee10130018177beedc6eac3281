@@ -1,0 +1,11 @@
+package com.org.MACUS.testcases;
+
+public class Testcases {
+	
+	@Test
+	public void validatehomepage()
+	{
+		
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.org.MACUS.initilizer;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+public class Initilizer
+{
+	// Initializing environment properties 
+	public static FileInputStream envFis= null ;
+	public static Properties envProp= null ;
+	
+	// Initializing Locator properties 
+		public static FileInputStream locatorFis= null ;
+		public static Properties locatorProp= null ;
+	
+	public static void initilizer() throws IOException
+	{
+		envFis = new FileInputStream(new File("D:\\Data-Framework\\e-commerce\\src\\test\\resources\\com\\org\\MACUS\\config\\env.properties"));
+		envProp = new Properties();
+		envProp.load(envFis);
+				
+		locatorFis = new FileInputStream(new File("D:\\Data-Framework\\e-commerce\\src\\test\\resources\\com\\org\\MACUS\\config\\locator.properties"));
+		locatorProp = new Properties();
+		locatorProp.load(locatorFis);
+	}
+}
